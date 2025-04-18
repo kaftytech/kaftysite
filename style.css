@@ -65,7 +65,7 @@ nav ul a:hover {
 /* home  */
 .homeTop {
   width: 100%;
-  height: fit-content;
+  height:100vh;
   background-image: url(./Assets/download.gif);
   background-repeat: no-repeat;
   background-size: 400px 400px;
