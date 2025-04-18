@@ -159,14 +159,17 @@ nav ul a:hover {
   height: 60%;
   display: flex;
   justify-content: space-evenly;
-  gap: 20px;
-  flex-direction: column;
+  gap: 25px;
+  flex-direction: row;
+  flex-basis: 2;
+  flex-wrap: wrap;
   align-items: center;
+  padding: 20px;
   animation: shows1 0.2s linear;
   opacity: 1;
 }
 .packages div {
-  width: 70%;
+  width: 40%;
   height: 150%;
   background-color: #f5f6f7de;
   padding: 20px;
