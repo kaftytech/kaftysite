@@ -109,7 +109,7 @@ nav ul a:hover {
 /* about us  */
 .aboutUs {
   width: 100%;
-  height: 100%;
+  height: fit-content;
   background-color: #000000;
   display: flex;
   color: var(--optional);
