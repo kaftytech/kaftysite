@@ -2,6 +2,8 @@ const navLinks = document.getElementsByClassName("closing");
 const sideNav = document.getElementsByClassName("sideNav")[0];
 const menu = document.getElementsByClassName("menu")[0];
 const closeNav = document.getElementsByClassName("sideNavClose")[0];
+
+
 menu.addEventListener("click", () => {
   sideNav.style.display = "block";
 });
@@ -26,3 +28,12 @@ form.addEventListener("submit", (e) => {
     )
     .catch((error) => console.error("Error!", error.message));
 });
+
+
+
+
+
+
+
+
+
