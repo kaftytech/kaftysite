@@ -88,16 +88,24 @@ nav ul a:hover {
   justify-content: center;
   text-align: left;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 .sideNavContent #sideNavLinks a {
   text-decoration: none;
   color: var(--optional);
-  font-size: 22px;
+  font-size: 32px;
   font-weight: 500;
 }
 .sideNavContent #sideNavLinks a:hover{
   text-decoration: underline;
+  color: var(--secondary);
+}
+.sideNavSocial{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.sideNavSocial a:hover{
   color: var(--secondary);
 }
 .sideNavLogo{
@@ -126,7 +134,7 @@ nav ul a:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
-
+ border-bottom: 1px solid white;
   align-items: center;
 }
 .topQuote {
@@ -163,6 +171,7 @@ nav ul a:hover {
   padding: 30px;
   justify-content: space-evenly;
   align-items: center;
+   border-bottom: 1px solid white;
 }
 .aboutUs h1 {
   color: var(--secondary);
@@ -184,20 +193,19 @@ nav ul a:hover {
 .services {
   width: 100%;
   height: fit-content;
-  background: url(./Assets/….gif) black fixed;
-  background-size: 500px 600px;
-  background-repeat: no-repeat;
-  background-position: center;
+  background:black fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+   border-bottom: 1px solid white;
 }
-.services h1 {
+.contents {
   color: var(--secondary);
   font-size: 42px;
   margin-top: 60px;
-  text-decoration: underline;
+  margin-bottom: 30px;
+  text-align: left;
 }
 
 .packages {
@@ -247,6 +255,82 @@ nav ul a:hover {
   font-size: 18px;
   font-weight: 700;
 }
+.products{
+  padding-top:30px;
+  height: fit-content;
+  background-color: #000000;
+}
+.productCntnt{
+  color: var(--secondary);
+  font-size: 42px;
+  text-align: center;
+
+}
+.demos{
+display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  height: fit-content;
+  width: 100%;
+  color: var(--secondary);
+  gap: 10px;
+  padding: 20px;
+  background-color: #000000;
+  border-bottom: 1px solid white;
+}
+
+
+.demos::-webkit-scrollbar {
+  display: none;
+}
+ .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      flex: 0 0 auto;
+  width: 300px;
+  scroll-snap-align: start;
+
+ 
+      margin: 0;
+      height: min-content;
+      text-align: center;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      height: 300px;
+      position: relative;
+      border-bottom: 2px solid black;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card .content {
+        display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+   align-items: center;
+      padding: 20px;
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+    .card p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+    .preview {
+      margin-top: 10px;
+      display: inline-block;
+      background: var(--secondary);
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
 
 .contactUs {
   width: 100%;
@@ -256,6 +340,7 @@ nav ul a:hover {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+   border-bottom: 1px solid white;
 }
 .contactmemo {
   margin-top: 60px;
@@ -268,7 +353,7 @@ nav ul a:hover {
 .contactmemo h2 {
   color: var(--secondary);
   font-size: 42px;
-  text-decoration: underline;
+ 
 }
 .contactmemo p {
   color: var(--optional);
@@ -441,7 +526,13 @@ nav ul a:hover {
     opacity: 0;
   }
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 980px) {
+  body{
+    width: 100%;
+  }
+    html{
+    width: 100%;
+  }
   nav ul {
     display: none;
   }
