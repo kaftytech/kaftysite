@@ -10,6 +10,7 @@
 }
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 :root {
   --primary: #2c3e50;
@@ -276,13 +277,23 @@ display: flex;
   color: var(--secondary);
   gap: 10px;
   padding: 20px;
+   scrollbar-color:  var(--secondary) var(--optional);
   background-color: #000000;
   border-bottom: 1px solid white;
 }
 
 
 .demos::-webkit-scrollbar {
-  display: none;
+  height: 100px;
+}
+.demos::-webkit-scrollbar-track {
+  background: var(--primary);
+  
+}
+.demos::-webkit-scrollbar-thumb {
+  background-color:var(--secondary);
+  border-radius: 4px;
+
 }
  .card {
       background: white;
@@ -307,11 +318,14 @@ display: flex;
       transform: scale(1.05);
     }
     .card .content {
-        display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-   align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      align-items:center;
       padding: 20px;
+    }
+    .card .content img{
+      border-radius: 20px;
     }
     .card h3 {
       margin-top: 0;
@@ -430,7 +444,7 @@ display: flex;
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 50%;
+  height: fit-content;
   background-color: #000000;
   border-top: 1px solid var(--secondary);
   color: var(--optional);
@@ -455,6 +469,7 @@ display: flex;
   display: flex;
   width: 100%;
   gap: 10px;
+  height: fit-content;
   animation: shows 0.2s linear;
   justify-content: center;
   flex-direction: column;
@@ -569,8 +584,22 @@ display: flex;
   .packages div {
     width: 90%;
   }
+  /* .demos{
+    scroll-snap-type:none;
+    scroll-behavior: auto;
+    
+  }
+  .demos::-webkit-scrollbar,.demos::-webkit-scrollbar-thumb,.demos::-webkit-scrollbar-track{
+    display: none;
+    height: 0;
+  } */
+
   .contactUs .form {
     width: 90%;
+  }
+  .contactUs button{
+    padding: 10px 20px;
+    text-align: center;
   }
   .contactmemo h2 {
     font-size: 32px;
