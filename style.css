@@ -375,9 +375,9 @@ display: flex;
       transform: translateY(-10px);
       box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3);
     }
-    .card span{
+    /* .card span{
       display: none;
-    }
+    } */
     .card .content {
       display: flex;
       flex-direction: column;
