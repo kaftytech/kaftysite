@@ -28,29 +28,33 @@ for (let i = 0; i < card.length; i++) {
   dubCards.push(cloned);
 }
 
-topParent.appendChild(dubCards[rndm]);
-topParent.appendChild(dubCards[rndm1()]);
-topParent.appendChild(dubCards[rndm2()]);
-topParent.appendChild(dubCards[rndm2()+4]);
-topParent.appendChild(dubCards[rndm2()+2]);
+
 function rndm1(){
   
-
+  let a=rndm+5
   if (rndm>=19) {
     return rndm-19;
   }
-  return rndm+4
+   return a;
 
 }
 function rndm2(){
   
 
+  var a= rndm+1
   if (rndm>=19) {
     return rndm-19;
   }
-  return rndm+1
+  return a
 
 }
+
+
+topParent.appendChild(dubCards[rndm]);
+topParent.appendChild(dubCards[rndm1()]);
+topParent.appendChild(dubCards[rndm2()]);
+topParent.appendChild(dubCards[rndm2()+1]);
+topParent.appendChild(dubCards[rndm2()-1]);
 var search = document.getElementById("search");
 search.addEventListener('focusout',()=>{
 
@@ -64,8 +68,10 @@ for (let i = 0; i < dubCards.length; i++) {
 }
 
 for (let index = 0; index < newDubCards.length; index++) {
-  
+  if (newDubCards[index]) {
+    
   modelContainer.append(newDubCards[index])
+  }
   
 }
 
