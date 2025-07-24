@@ -7,11 +7,13 @@ const topParent=document.getElementsByClassName("topParent")[0];
 const modelContainer=document.getElementsByClassName("modelContainer")[0];
 let rndm;
 rndm=Math.floor(Math.random()*19)
+
 const dubCards = [];
 for (let i = 0; i < card.length; i++) {
   const cloned = card[i].cloneNode(true); 
   dubCards.push(cloned);
 }
+console.log(dubCards.length);
 topParent.appendChild(dubCards[rndm]);
 topParent.appendChild(dubCards[rndm1()]);
 topParent.appendChild(dubCards[rndm2()]);
@@ -57,12 +59,12 @@ for (let i = 0; i < dubCards.length; i++) {
   const cloned = dubCards[i].cloneNode(true); 
   newDubCards.push(cloned);
 }
-console.log(newDubCards.length);
 
 for (let index = 0; index < newDubCards.length; index++) {
   modelContainer.appendChild(newDubCards[index])
   
 }
+
 search.addEventListener('focus',()=>{
 
  
@@ -76,14 +78,16 @@ search.addEventListener("keyup", function () {
   for (count = 0; count < newDubCards.length; count++) {
     var productName = newDubCards[count].querySelector("h3").textContent;
     var productName1 = newDubCards[count].querySelector("p").textContent;
-    if (productName.toLocaleUpperCase().indexOf(enterdValue) < 0&&productName1.toLocaleUpperCase().indexOf(enterdValue)<0) {
+    var productName2 = newDubCards[count].querySelector(".searchContent").textContent;
+  
+    
+    if (productName.toLocaleUpperCase().indexOf(enterdValue) < 0 && productName1.toLocaleUpperCase().indexOf(enterdValue)<0  && productName2.toLocaleUpperCase().indexOf(enterdValue)<0 ) {
       modelContainer.getElementsByClassName('card')[count].style.display="none"
-      // modelContainer.removeChild(newDubCards[count])
+      
     }
      else {
       modelContainer.getElementsByClassName('card')[count].style.display="flex"
     }
-    console.log();
 
   }
 });
