@@ -6,6 +6,20 @@ const card=document.getElementsByClassName("card");
 const topParent=document.getElementsByClassName("topParent")[0];
 const modelContainer=document.getElementsByClassName("modelContainer")[0];
 let rndm;
+
+menu.addEventListener("click", () => {
+  sideNav.style.display = "block";
+});
+closeNav.addEventListener("click", () => {
+  sideNav.style.display = "none";
+});
+
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", () => {
+    sideNav.style.display = "none";
+  });
+}
+
 rndm=Math.floor(Math.random()*19)
 
 const dubCards = [];
@@ -13,7 +27,7 @@ for (let i = 0; i < card.length; i++) {
   const cloned = card[i].cloneNode(true); 
   dubCards.push(cloned);
 }
-console.log(dubCards.length);
+
 topParent.appendChild(dubCards[rndm]);
 topParent.appendChild(dubCards[rndm1()]);
 topParent.appendChild(dubCards[rndm2()]);
@@ -37,17 +51,6 @@ function rndm2(){
   return rndm+1
 
 }
-menu.addEventListener("click", () => {
-  sideNav.style.display = "block";
-});
-closeNav.addEventListener("click", () => {
-  sideNav.style.display = "none";
-});
-for (let i = 0; i < navLinks.length; i++) {
-  navLinks[i].addEventListener("click", () => {
-    sideNav.style.display = "none";
-  });
-}
 var search = document.getElementById("search");
 search.addEventListener('focusout',()=>{
 
@@ -61,7 +64,8 @@ for (let i = 0; i < dubCards.length; i++) {
 }
 
 for (let index = 0; index < newDubCards.length; index++) {
-  modelContainer.appendChild(newDubCards[index])
+  
+  modelContainer.append(newDubCards[index])
   
 }
 
@@ -70,7 +74,7 @@ search.addEventListener('focus',()=>{
  
   modelContainer.style.display="flex";
     
-
+console
 
 
 search.addEventListener("keyup", function () {
