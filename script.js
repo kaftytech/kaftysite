@@ -2,8 +2,39 @@ const navLinks = document.getElementsByClassName("closing");
 const sideNav = document.getElementsByClassName("sideNav")[0];
 const menu = document.getElementsByClassName("menu")[0];
 const closeNav = document.getElementsByClassName("sideNavClose")[0];
+const card=document.getElementsByClassName("card");
+const topParent=document.getElementsByClassName("topParent")[0];
+const modelContainer=document.getElementsByClassName("modelContainer")[0];
+let rndm;
+rndm=Math.floor(Math.random()*19)
+const dubCards = [];
+for (let i = 0; i < card.length; i++) {
+  const cloned = card[i].cloneNode(true); 
+  dubCards.push(cloned);
+}
+topParent.appendChild(dubCards[rndm]);
+topParent.appendChild(dubCards[rndm1()]);
+topParent.appendChild(dubCards[rndm2()]);
+topParent.appendChild(dubCards[rndm2()+4]);
+topParent.appendChild(dubCards[rndm2()+2]);
+function rndm1(){
+  
 
+  if (rndm>=19) {
+    return rndm-19;
+  }
+  return rndm+4
 
+}
+function rndm2(){
+  
+
+  if (rndm>=19) {
+    return rndm-19;
+  }
+  return rndm+1
+
+}
 menu.addEventListener("click", () => {
   sideNav.style.display = "block";
 });
@@ -15,6 +46,57 @@ for (let i = 0; i < navLinks.length; i++) {
     sideNav.style.display = "none";
   });
 }
+var search = document.getElementById("search");
+search.addEventListener('focusout',()=>{
+
+  modelContainer.style.display="none";
+})
+
+const newDubCards=[];
+for (let i = 0; i < dubCards.length; i++) {
+  const cloned = dubCards[i].cloneNode(true); 
+  newDubCards.push(cloned);
+}
+console.log(newDubCards.length);
+
+for (let index = 0; index < newDubCards.length; index++) {
+  modelContainer.appendChild(newDubCards[index])
+  
+}
+search.addEventListener('focus',()=>{
+
+ 
+  modelContainer.style.display="flex";
+    
+
+
+
+search.addEventListener("keyup", function () {
+  var enterdValue = search.value.toUpperCase();
+  for (count = 0; count < newDubCards.length; count++) {
+    var productName = newDubCards[count].querySelector("h3").textContent;
+    var productName1 = newDubCards[count].querySelector("p").textContent;
+    if (productName.toLocaleUpperCase().indexOf(enterdValue) < 0&&productName1.toLocaleUpperCase().indexOf(enterdValue)<0) {
+      modelContainer.getElementsByClassName('card')[count].style.display="none"
+      // modelContainer.removeChild(newDubCards[count])
+    }
+     else {
+      modelContainer.getElementsByClassName('card')[count].style.display="flex"
+    }
+    console.log();
+
+  }
+});
+})
+
+
+
+
+
+
+
+
+
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbz7CRL3o6XS7rRQ11CHbSoHlhii6DxnRDH4zTMoqeluzGQ1XtlfHJ18h1hbzdaf4bpS/exec";
@@ -28,6 +110,7 @@ form.addEventListener("submit", (e) => {
     )
     .catch((error) => console.error("Error!", error.message));
 });
+
 
 
 

@@ -79,6 +79,44 @@ nav ul a:hover {
   display: none;
   color: var(--optional);
 }
+.search{
+  width: 40%;
+  height: 30px;
+  background-color: var(--optional);
+  display: flex;
+  border-radius: 12px;
+  padding: 2px 8px;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.search input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  outline: none;
+  font-size: 14px;
+}
+.search i{
+  cursor: pointer;
+  color: var(--primary);
+  font-weight:600;
+}
+.modelContainer{
+  position: absolute;
+  top: 0;
+  background-color: black;
+  width: 100%;
+  height: fit-content;
+  z-index: 1;
+  padding:10% 5% ;
+  gap: 25px;
+  display: none;
+  transition: all .15s linear;
+  flex-wrap: wrap;
+}
 .sideNav{
   display: none;
 }
@@ -262,48 +300,7 @@ nav ul a:hover {
         transform: translateY(-10px);
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
       }
-/* .packages {
-  width: 100%;
-  height: 60%;
-  display: flex;
-  justify-content: space-evenly;
-  gap: 25px;
-  flex-direction: row;
-  flex-basis: 2;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 20px;
-  animation: shows1 0.2s linear;
-  opacity: 1;
-}
-.packages div {
-  width: 40%;
-  height: 150%;
-  background-color: var(--optional);
-  padding: 20px;
-  backdrop-filter: blur(5px);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.packages div h2 {
-  color: var(--primary);
-  display: flex;
-  gap: 20px;
 
-  align-items: center;
-}
-.packages div ul {
-  list-style: none;
-  line-height: 50px;
-  border-top: 1px solid var(--dark);
-  font-size: 18px;
-}
-.packages div p {
-  padding: 10px;
-  font-size: 20px;
-} */
 .active {
   color: var(--secondary);
   font-size: 18px;
@@ -364,17 +361,14 @@ display: flex;
       background: var(--dark);
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      height: min-content;
-      flex :0 0  auto;
-
-      width: 30%;
+  width: 30%;
       text-align: center;
       overflow: hidden;
       cursor: pointer;
-      height: 85%;
-  will-change: transform;
-       position: relative;
-  transition: transform 0.3s ease;
+      height: 480px;
+      will-change: transform;
+      position: relative;
+      transition: transform 0.3s ease;
      
     }
     .card:hover {
@@ -610,7 +604,7 @@ background: linear-gradient( to left,rgb(0, 0, 0), rgb(0, 0, 0));
       font-size: 42px;
     }
     .templateTopics{
-       padding: 3rem;
+       padding: 20px;
        height: 100%;
     }
     .topTemplates{
@@ -635,8 +629,9 @@ background: linear-gradient( to left,rgb(0, 0, 0), rgb(0, 0, 0));
     }
     .multiCards{
       display: flex;
-      padding: 20px;
+      padding: 3rem;
       flex-wrap: wrap;
+      align-items: center;
       gap: 20px;
       width: 100%;
       height: 100%;
@@ -646,13 +641,14 @@ background: linear-gradient( to left,rgb(0, 0, 0), rgb(0, 0, 0));
       color: var(--optional);
       font-size: .98rem;
     }
-    .momentsMemories{
+    .momentsMemories,.medical,.education{
       background-color: black;
     }
-    .momentsMemories .card{
-      width: 30%;
-      height: 70%;
-    }
+   
+
+
+
+
 @keyframes hiding {
   to {
     opacity: 0;

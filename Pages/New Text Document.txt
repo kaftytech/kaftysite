@@ -1,0 +1,125 @@
+<div class="adminContainer">
+            <aside>
+                <div class="asideContent">
+                    <h1>Admin Panel</h1>
+                    <ul>
+                        <li>Templates</li>
+                        <li>Blogs</li>
+                    </ul>
+                </div>
+                <div class="bottomContent">
+                    <a href="../index.html"><button>Logout</button></a>
+                </div>
+            </aside>
+            <main>
+                <section>
+                    <div class="tempSectionAdd">
+                        <h2>Add Section</h2>
+                        <div class="sectionAddMain">
+                            <input type="text">
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="tempAdd">
+                        <h2>Add Templates</h2>
+                        <div class="tempAddMain">
+                            <form action="">
+                            <div class="tempSecChoose">
+                            <label for="tempAdds">Choose</label>
+                            <select name="" id="tempAdds" class="tempAdds">
+                                <option class="theOptions" value="Experience &amp; Lifestyle Brands">Experience & Lifestyle Brands</option>
+                                <option class="theOptions" value="Hospitality & Culinary Concepts">Hospitality & Culinary Concepts</option>
+                                <option class="theOptions" value="Health, Wellness & Medical Services">Health, Wellness & Medical Services</option>
+                                <option class="theOptions" value="Business & Property Solutions">Business & Property Solutions</option>
+                                <option class="theOptions" value="Education & Learning Platforms">Education & Learning Platforms</option>
+                            </select>
+                            </div>
+                            <div class="TempAddName">
+                                <label for="addName">Name:</label>
+                                <input type="text" id="addName" required>
+                            </div>
+                            <div class="TempAddDescription">
+                                <label for="addDescription">Description:</label>
+                                <input type="text" required id="addDescription">
+                            </div>
+                            <div class="TempAddlink">
+                                <label for="addlink">link:</label>
+                                <input type="text" required id="addlink">
+                            </div>
+                            <div class="TempAddImg">
+                                <label for="addImg">Img:</label>
+                                <input type="file" required id="addImg" accept="image/*">
+                            </div>
+                            <div class="tempAddSubmitBtn">
+                                
+                                <input type="submit" class="addSubmit" value="submit">
+                                
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <h1 class="closePanel">close</h1>
+        </div>
+
+
+       const forInsert=document.getElementsByClassName("forInsert");
+const theOptions=document.getElementsByClassName("tempAdds")[0];
+const addSubmit=document.getElementsByClassName("addSubmit")[0];
+const allTemplates=document.getElementsByClassName("allTemplates")[0];
+const mmParent=document.getElementsByClassName("multiCards");
+
+
+const viewPanel=document.getElementsByClassName("viewPanel")[0];
+const adminCont=document.getElementsByClassName("adminContainer")[0];
+const closePanel=document.getElementsByClassName("closePanel")[0];
+viewPanel.addEventListener('click',()=>{
+  adminCont.style.display="block";
+})
+closePanel.addEventListener('click',()=>{
+  adminCont.style.display="none";
+})
+
+let obj={
+    Experience_Lifestyle_Brands:"mmParent",
+    Hospitality_Culinary_Concepts:"ssParent",
+    Health_Wellness_Medical_Services:"hhParent"
+};
+addSubmit.addEventListener("click",()=>{
+
+    
+for (let index = 0; index < forInsert.length; index++) {
+   
+   
+    
+        
+  if(theOptions.value===forInsert[index].textContent){
+    console.log("hi");
+      let name=document.getElementById("addName").value;
+      let description=document.getElementById("addName").value;
+      let addLink=document.getElementById("addName").value;
+      let addimg=document.getElementById("addImg");
+      const mainDiv=document.createElement('div');  
+      let inDiv=document.createElement('div');
+      let head1
+      const cardClass=document.createAttribute("class");
+      const contentClass=document.createAttribute("class");
+      cardClass.value='card'
+      contentClass.value='content'
+        let addImgs=document.createElement('img');
+      const file=addimg.files[0];
+      if(file){
+        addImgs.src=URL.createObjectURL(file);
+      }
+
+      mainDiv.setAttributeNode(cardClass);
+      inDiv.setAttributeNode(contentClass);
+      mainDiv.append(inDiv);
+      inDiv.appendChild(addImgs);
+      mmParent[index].appendChild(mainDiv);
+      
+        
+  }
+  }}) 
