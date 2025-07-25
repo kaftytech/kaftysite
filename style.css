@@ -3,9 +3,9 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "poppins", sans-serif;
-  transition: all .15s linear;
+  transition: all 0.15s linear;
 }
-a{
+a {
   text-decoration: none;
 }
 *::selection {
@@ -17,9 +17,9 @@ html {
   height: 100%;
   width: 100%;
 }
-body{
-   background-color: var(--dark);
-        color: var(--light);
+body {
+  background-color: var(--dark);
+  color: var(--light);
 }
 :root {
   --primary: #2c3e50;
@@ -50,7 +50,7 @@ nav {
   height: 50px;
   padding: 25px 20px;
   border-radius: 25px;
-background-color: rgba(18, 18, 18, 0.9);
+  background-color: rgba(18, 18, 18, 0.9);
   backdrop-filter: blur(10px);
 }
 nav .logo {
@@ -79,7 +79,7 @@ nav ul a:hover {
   display: none;
   color: var(--optional);
 }
-.search{
+.search {
   width: 40%;
   height: 30px;
   background-color: var(--optional);
@@ -90,7 +90,7 @@ nav ul a:hover {
   align-items: center;
   z-index: 2;
 }
-.search input{
+.search input {
   width: 100%;
   height: 100%;
   border: none;
@@ -99,32 +99,32 @@ nav ul a:hover {
   outline: none;
   font-size: 14px;
 }
-.search i{
+.search i {
   cursor: pointer;
   color: var(--primary);
-  font-weight:600;
+  font-weight: 600;
 }
-.modelContainer{
+.modelContainer {
   position: absolute;
   top: 0;
   background-color: black;
   width: 100%;
   height: fit-content;
   z-index: 1;
-  padding:10% 5% ;
+  padding: 10% 5%;
   gap: 25px;
   display: none;
-  transition: all .15s linear;
+  transition: all 0.15s linear;
   flex-wrap: wrap;
 }
-.sideNav{
+.sideNav {
   display: none;
 }
 .sideNavContent {
   width: 100%;
   height: 100vh;
   position: fixed;
-  background-color: var(--dark)c5;
+  background-color: var(--dark) c5;
   backdrop-filter: blur(10px);
   z-index: 999999;
   top: 0;
@@ -147,24 +147,24 @@ nav ul a:hover {
   font-size: 32px;
   font-weight: 500;
 }
-.sideNavContent #sideNavLinks a:hover{
+.sideNavContent #sideNavLinks a:hover {
   text-decoration: underline;
   color: var(--secondary);
 }
-.sideNavSocial{
+.sideNavSocial {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-.sideNavSocial a:hover{
+.sideNavSocial a:hover {
   color: var(--secondary);
 }
-.sideNavLogo{
+.sideNavLogo {
   display: flex;
   width: 100%;
   padding: 20px;
   align-self: flex-start;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
 .sideNavContent i {
@@ -185,7 +185,7 @@ nav ul a:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
- border-bottom: 1px solid var(--optional);
+  border-bottom: 1px solid var(--optional);
   align-items: center;
 }
 .topQuote {
@@ -213,7 +213,6 @@ nav ul a:hover {
 }
 /* about us  */
 .aboutUs {
-
   width: 100%;
   height: 100%;
   background-color: var(--dark);
@@ -223,7 +222,7 @@ nav ul a:hover {
   padding: 30px;
   justify-content: space-evenly;
   align-items: center;
-   border-bottom: 1px solid var(--optional);
+  border-bottom: 1px solid var(--optional);
 }
 .aboutUs h1 {
   color: var(--secondary);
@@ -245,14 +244,15 @@ nav ul a:hover {
 .services {
   width: 100%;
   height: 100%;
-  background: linear-gradient( to left,rgb(0, 0, 0), rgb(0, 0, 0));
+  background: linear-gradient(to left, rgb(0, 0, 0), rgb(0, 0, 0));
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
   justify-content: space-between;
-   border-bottom: 1px solid var(--optional);
+  border-bottom: 1px solid var(--optional);
 }
+
 .contents {
   color: var(--secondary);
   font-size: 42px;
@@ -260,72 +260,72 @@ nav ul a:hover {
   margin-bottom: 30px;
   text-align: left;
 }
-.threeParts{
+.threeParts {
   display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        height: 100%;
-        padding: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  height: 100%;
+  padding: 30px;
 }
-.parts{
-         background-color: var(--gray);
-        border-radius: 10px;
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        transition: var(--transition);
-        border-left: 4px solid var(--secondary);
-       
-        line-height: 23px;
-        width: fit-content;
-        transition: all .15s linear;
+.parts {
+  background-color: var(--gray);
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: var(--transition);
+  border-left: 4px solid var(--secondary);
+
+  line-height: 23px;
+  width: fit-content;
+  transition: all 0.15s linear;
 }
-.parts i{
-    font-size: 2.5rem;
-        color: var(--secondary);
-        margin-bottom: 1rem;
-}
-.parts h3{
+.parts i {
+  font-size: 2.5rem;
+  color: var(--secondary);
   margin-bottom: 1rem;
-        font-size: 1.5rem;
-        color: var(--optional);
-        line-height: 40px;
 }
-.parts p{
+.parts h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--optional);
+  line-height: 40px;
+}
+.parts p {
   color: var(--optional);
   line-height: 33px;
 }
 .parts:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-      }
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
 
 .active {
   color: var(--secondary);
   font-size: 18px;
   font-weight: 700;
 }
-.products{
-  padding-top:30px;
+.products {
+  padding-top: 30px;
   position: sticky;
   top: 0px;
   height: 100%;
-  background: linear-gradient( to left,rgb(0, 0, 0), rgb(0, 0, 0));
+  background: linear-gradient(to left, rgb(0, 0, 0), rgb(0, 0, 0));
   display: flex;
   flex-direction: column;
-  align-items: center; justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
   padding: 20px;
-   border-bottom: 1px solid var(--optional);
+  border-bottom: 1px solid var(--optional);
 }
-.productCntnt{
+.productCntnt {
   color: var(--secondary);
   font-size: 42px;
   text-align: center;
-
 }
-.products .templatesBtn{
-    padding: 10px 120px;
+.products .templatesBtn {
+  padding: 10px 120px;
   outline: none;
   border-radius: 15px;
   cursor: pointer;
@@ -336,14 +336,13 @@ nav ul a:hover {
   font-size: 16px;
   display: flex;
   gap: 10px;
-
 }
 .products .templatesBtn:hover {
   box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3);
   transform: scale(1.05);
 }
-.demos{
-display: flex;
+.demos {
+  display: flex;
   height: 100vh;
   width: 100%;
   justify-content: space-evenly;
@@ -351,75 +350,68 @@ display: flex;
   gap: 10px;
   padding: 20px;
   align-items: center;
-  background: linear-gradient( to left,rgb(0, 0, 0), rgb(0, 0, 0));
-
- 
+  background: linear-gradient(to left, rgb(0, 0, 0), rgb(0, 0, 0));
 }
 
-
- .card {
-      background: var(--dark);
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(56, 56, 56, 0.281);
+.card {
+  background: var(--dark);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(56, 56, 56, 0.281);
   width: 30%;
-      text-align: center;
-      overflow: hidden;
-      cursor: pointer;
-      height: 480px;
-      will-change: transform;
-      position: relative;
-      transition: transform 0.3s ease;
-     
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3);
-    }
-    .card span{
-      display: none;
-    }
-   
-    .card .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: left;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  height: 480px;
+  will-change: transform;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3);
+}
+.card span {
+  display: none;
+}
 
-      height: 100%;
-    }
-    .card .content img{
-      border-radius: 12px 12px 0 0;
-      width: 100%;
-      height: 15rem;
-      object-fit:fill;
-    }
-    .card h3 {
-      margin-top: 0;
-      font-size: 1.2rem;
-      color: var(--optional);
-      padding: 10px;
-    }
-    .card p {
-      color: gray;
-      font-size: 0.95rem;
-      text-align: left;
-      padding: 10px;
-    }
-    .preview {
+.card .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
 
-      display: inline-block;
-  
-      color: var(--secondary);
-      padding:12px;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-       
+  height: 100%;
+}
+.card .content img {
+  border-radius: 12px 12px 0 0;
+  width: 100%;
+  height: 15rem;
+  object-fit: fill;
+}
+.card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: var(--optional);
+  padding: 10px;
+}
+.card p {
+  color: gray;
+  font-size: 0.95rem;
+  text-align: left;
+  padding: 10px;
+}
+.preview {
+  display: inline-block;
 
-    }
-    .preview:hover{
-      transform: translateY(-2px);
-    }
+  color: var(--secondary);
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.preview:hover {
+  transform: translateY(-2px);
+}
 .contactUs {
   width: 100%;
   height: 100%;
@@ -428,7 +420,7 @@ display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-   border-bottom: 1px solid var(--optional);
+  border-bottom: 1px solid var(--optional);
 }
 .contactmemo {
   margin-top: 60px;
@@ -441,7 +433,6 @@ display: flex;
 .contactmemo h2 {
   color: var(--secondary);
   font-size: 42px;
- 
 }
 .contactmemo p {
   color: var(--optional);
@@ -497,7 +488,7 @@ display: flex;
   font-size: 16px;
 }
 .form button:hover {
-   box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3);
+  box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3);
   transform: scale(1.05);
 }
 .scrollAni {
@@ -522,7 +513,7 @@ display: flex;
   flex-direction: column;
   width: 100%;
   height: fit-content;
-background: linear-gradient( to left,rgb(0, 0, 0), rgb(0, 0, 0));
+  background: linear-gradient(to left, rgb(0, 0, 0), rgb(0, 0, 0));
 
   border-top: 1px solid var(--secondary);
   color: var(--optional);
@@ -594,64 +585,60 @@ background: linear-gradient( to left,rgb(0, 0, 0), rgb(0, 0, 0));
   justify-content: left;
 }
 
-
- /* Template Handling */
-    .templateHead{
-      width: 100%;
-      height: 100vh;
-      color: var(--optional);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
-      background-color: black;
-      font-size: 42px;
-    }
-    .templateTopics{
-       padding: 20px;
-       height: 100%;
-    }
-    .topTemplates{
-      height: 50%;
-      padding: 20px;
-      margin-top: 30px;
-    }
-  .headings{
-      font-size: 20px;
-      color: var(--secondary);
-      width: fit-content;
-    }
-    .headings h2::after{
-      content: '';
-    display: block;
-    border-radius: 12px;
+/* Template Handling */
+.templateHead {
+  width: 100%;
+  height: 100vh;
+  color: var(--optional);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: black;
+  font-size: 42px;
+}
+.templateTopics {
+  padding: 20px;
+  height: 100%;
+}
+.topTemplates {
+  height: 50%;
+  padding: 20px;
+  margin-top: 30px;
+}
+.headings {
+  font-size: 20px;
+  color: var(--secondary);
+  width: fit-content;
+}
+.headings h2::after {
+  content: "";
+  display: block;
+  border-radius: 12px;
   height: 2px;
   width: 50%;
   margin-top: 5px;
   background-color: var(--secondary);
-
-    }
-    .multiCards{
-      display: flex;
-      padding: 3%;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 30px;
-      width: 100%;
-      height: 100%;
-      justify-content: flex-start;
-    }
-   .content .price{
-      color: var(--optional);
-      font-size: .98rem;
-    }
-    .momentsMemories,.medical,.education{
-      background-color: black;
-    }
-   
-
-
-
+}
+.multiCards {
+  display: flex;
+  padding: 3%;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+}
+.content .price {
+  color: var(--optional);
+  font-size: 0.98rem;
+}
+.momentsMemories,
+.medical,
+.education {
+  background-color: black;
+}
 
 @keyframes hiding {
   to {
@@ -680,10 +667,10 @@ background: linear-gradient( to left,rgb(0, 0, 0), rgb(0, 0, 0));
   }
 }
 @media screen and (max-width: 980px) {
-  body{
+  body {
     width: 100%;
   }
-    html{
+  html {
     width: 100%;
   }
   nav ul {
@@ -706,8 +693,8 @@ background: linear-gradient( to left,rgb(0, 0, 0), rgb(0, 0, 0));
   .socialIcons {
     display: none;
   }
-  .aboutUs{
-    height: fit-content ;
+  .aboutUs {
+    height: fit-content;
   }
   .aboutUs h1 {
     font-size: 32px;
@@ -716,10 +703,10 @@ background: linear-gradient( to left,rgb(0, 0, 0), rgb(0, 0, 0));
   .aboutUs div {
     font-size: 14px;
   }
-  .services{
+  .services {
     height: fit-content;
   }
-  .threeParts{
+  .threeParts {
     height: fit-content;
   }
   .services h1 {
@@ -728,22 +715,21 @@ background: linear-gradient( to left,rgb(0, 0, 0), rgb(0, 0, 0));
   .packages div {
     width: 90%;
   }
-  .products{
+  .products {
     height: fit-content;
   }
-   .demos{
-    flex-direction: column;  
-    height: fit-content;  
+  .demos {
+    flex-direction: column;
+    height: fit-content;
   }
-  .card{
+  .card {
     width: fit-content;
   }
- 
 
   .contactUs .form {
     width: 90%;
   }
-  .contactUs button{
+  .contactUs button {
     padding: 10px 20px;
     text-align: center;
   }
@@ -764,52 +750,47 @@ background: linear-gradient( to left,rgb(0, 0, 0), rgb(0, 0, 0));
   .footBases5 p {
     font-size: 12px;
   }
-  .products .templatesBtn{
-     padding: 10px 20px;
+  .products .templatesBtn {
+    padding: 10px 20px;
     text-align: center;
   }
 
-  .multiCards{
+  .multiCards {
     flex-direction: column;
     width: 100%;
     gap: 40px;
     padding: 40px 5px;
-    
   }
-  .multiCards .card{
+  .multiCards .card {
     width: 100%;
   }
-  .templateHead{
+  .templateHead {
     font-size: 90%;
   }
 }
- @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      
-      .fade-in {
-        animation: fadeIn 1s ease forwards;
-      }
-      
-      .delay-1 {
-        animation-delay: 0.2s;
-      }
-      
-      .delay-2 {
-        animation-delay: 0.4s;
-      }
-      
-      .delay-3 {
-        animation-delay: 0.6s;
-      }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
 
+.delay-1 {
+  animation-delay: 0.2s;
+}
 
-   
+.delay-2 {
+  animation-delay: 0.4s;
+}
+
+.delay-3 {
+  animation-delay: 0.6s;
+}

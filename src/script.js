@@ -3,7 +3,6 @@ const sideNav = document.getElementsByClassName("sideNav")[0];
 const menu = document.getElementsByClassName("menu")[0];
 const closeNav = document.getElementsByClassName("sideNavClose")[0];
 
-
 menu.addEventListener("click", () => {
   sideNav.style.display = "block";
 });
@@ -16,26 +15,3 @@ for (let i = 0; i < navLinks.length; i++) {
     sideNav.style.display = "none";
   });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

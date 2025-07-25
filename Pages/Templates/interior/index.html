@@ -1,553 +1,982 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="We provide professional web development,
+    app development, and software solutions tailored for your business."
+    />
+
+    <meta
+      name="keywords"
+      content="IT company Tirunelveli, web development, app
+  development, software company, UI UX design, full stack development"
+    />
+
+    <meta name="author" content="kafty Technologies" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="Kafty" />
+    <meta
+      property="og:description"
+      content="We build custom websites, mobile
+  apps, and software for businesses of all sizes."
+    />
+    <meta
+      property="og:image"
+      content="https://kaftytechnologies/Assets/Picsart_25-04-16_22-53-49-346"
+    />
+    <meta property="og:url" content="https://kaftytechnologies.in" />
+    <meta property="og:type" content="website" />
+
+    <meta name="robots" content="index, follow" />
     <title>Elegance Interiors | Premium Interior Design</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#8B5A2B',
-                        secondary: '#F5F0E6',
-                        accent: '#D4A373',
-                    },
-                    fontFamily: {
-                        sans: ['Montserrat', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8B5A2B",
+              secondary: "#F5F0E6",
+              accent: "#D4A373",
+            },
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #8B5A2B;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .gallery-item {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .nav-link {
+        position: relative;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #8b5a2b;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .gallery-item {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
     </style>
-</head>
-<body class="font-sans text-gray-800 bg-white">
+  </head>
+  <body class="font-sans text-gray-800 bg-white">
     <!-- Navigation -->
     <nav class="fixed w-full bg-white bg-opacity-90 shadow-sm z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="text-2xl font-serif font-bold text-primary">Elegance Interiors</span>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-center space-x-8">
-                        <a href="#home" class="nav-link text-gray-800 hover:text-primary px-3 py-2 text-sm font-medium">Home</a>
-                        <a href="#about" class="nav-link text-gray-800 hover:text-primary px-3 py-2 text-sm font-medium">About</a>
-                        <a href="#services" class="nav-link text-gray-800 hover:text-primary px-3 py-2 text-sm font-medium">Services</a>
-                        <a href="#gallery" class="nav-link text-gray-800 hover:text-primary px-3 py-2 text-sm font-medium">Gallery</a>
-                        <a href="#contact" class="nav-link text-gray-800 hover:text-primary px-3 py-2 text-sm font-medium">Contact</a>
-                        <a href="#contact" class="bg-primary text-white px-6 py-2 rounded-md hover:bg-opacity-90 transition duration-300">Get Quote</a>
-                    </div>
-                </div>
-                <div class="-mr-2 flex md:hidden">
-                    <button type="button" id="menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none">
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+          <div class="flex-shrink-0 flex items-center">
+            <span class="text-2xl font-serif font-bold text-primary"
+              >Elegance Interiors</span
+            >
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-center space-x-8">
+              <a
+                href="#home"
+                class="nav-link text-gray-800 hover:text-primary px-3 py-2 text-sm font-medium"
+                >Home</a
+              >
+              <a
+                href="#about"
+                class="nav-link text-gray-800 hover:text-primary px-3 py-2 text-sm font-medium"
+                >About</a
+              >
+              <a
+                href="#services"
+                class="nav-link text-gray-800 hover:text-primary px-3 py-2 text-sm font-medium"
+                >Services</a
+              >
+              <a
+                href="#gallery"
+                class="nav-link text-gray-800 hover:text-primary px-3 py-2 text-sm font-medium"
+                >Gallery</a
+              >
+              <a
+                href="#contact"
+                class="nav-link text-gray-800 hover:text-primary px-3 py-2 text-sm font-medium"
+                >Contact</a
+              >
+              <a
+                href="#contact"
+                class="bg-primary text-white px-6 py-2 rounded-md hover:bg-opacity-90 transition duration-300"
+                >Get Quote</a
+              >
             </div>
+          </div>
+          <div class="-mr-2 flex md:hidden">
+            <button
+              type="button"
+              id="menu-btn"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-primary">Home</a>
-                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-primary">About</a>
-                <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-primary">Services</a>
-                <a href="#gallery" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-primary">Gallery</a>
-                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-primary">Contact</a>
-                <a href="#contact" class="block w-full bg-primary text-white px-6 py-2 rounded-md text-center mt-2">Get Quote</a>
-            </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-primary"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-primary"
+            >About</a
+          >
+          <a
+            href="#services"
+            class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-primary"
+            >Services</a
+          >
+          <a
+            href="#gallery"
+            class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-primary"
+            >Gallery</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-primary"
+            >Contact</a
+          >
+          <a
+            href="#contact"
+            class="block w-full bg-primary text-white px-6 py-2 rounded-md text-center mt-2"
+            >Get Quote</a
+          >
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="pt-20 md:pt-0">
-        <div class="relative h-screen flex items-center">
-            <div class="absolute inset-0 bg-black opacity-40"></div>
-            <div class="bg-[url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80')] bg-cover bg-center absolute inset-0"></div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-white">
-                <div class="md:w-1/2">
-                    <h1 class="text-4xl md:text-6xl font-serif font-bold mb-6">Transform Your Space with Elegance</h1>
-                    <p class="text-lg md:text-xl mb-8">We create beautiful, functional interiors that reflect your personality and lifestyle.</p>
-                    <div class="flex space-x-4">
-                        <a href="#contact" class="bg-primary text-white px-8 py-3 rounded-md hover:bg-opacity-90 transition duration-300">Get Started</a>
-                        <a href="#gallery" class="border border-white text-white px-8 py-3 rounded-md hover:bg-white hover:text-gray-800 transition duration-300">View Portfolio</a>
-                    </div>
-                </div>
+      <div class="relative h-screen flex items-center">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div
+          class="bg-[url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80')] bg-cover bg-center absolute inset-0"
+        ></div>
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-white"
+        >
+          <div class="md:w-1/2">
+            <h1 class="text-4xl md:text-6xl font-serif font-bold mb-6">
+              Transform Your Space with Elegance
+            </h1>
+            <p class="text-lg md:text-xl mb-8">
+              We create beautiful, functional interiors that reflect your
+              personality and lifestyle.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#contact"
+                class="bg-primary text-white px-8 py-3 rounded-md hover:bg-opacity-90 transition duration-300"
+                >Get Started</a
+              >
+              <a
+                href="#gallery"
+                class="border border-white text-white px-8 py-3 rounded-md hover:bg-white hover:text-gray-800 transition duration-300"
+                >View Portfolio</a
+              >
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-secondary">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">About Our Studio</h2>
-                <div class="w-20 h-1 bg-accent mx-auto"></div>
-            </div>
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Designer working" class="rounded-lg shadow-xl">
-                </div>
-                <div class="md:w-1/2">
-                    <h3 class="text-2xl font-serif font-semibold text-gray-800 mb-4">Crafting Beautiful Spaces Since 2010</h3>
-                    <p class="text-gray-600 mb-6">Elegance Interiors is a premier interior design firm dedicated to creating spaces that are both beautiful and functional. Our team of experienced designers brings a unique blend of creativity and technical expertise to every project.</p>
-                    <p class="text-gray-600 mb-8">We believe that great design should reflect the personality and lifestyle of our clients while maintaining timeless appeal. From concept to completion, we pay attention to every detail to ensure a seamless design experience.</p>
-                    <div class="grid grid-cols-2 gap-4 mb-8">
-                        <div class="flex items-center">
-                            <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
-                                <i class="fas fa-award text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">15+ Awards</h4>
-                                <p class="text-sm text-gray-600">Industry recognition</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
-                                <i class="fas fa-project-diagram text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold">200+ Projects</h4>
-                                <p class="text-sm text-gray-600">Completed successfully</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#contact" class="inline-flex items-center text-primary font-medium hover:underline">
-                        Learn more about us
-                        <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4"
+          >
+            About Our Studio
+          </h2>
+          <div class="w-20 h-1 bg-accent mx-auto"></div>
         </div>
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2">
+            <img
+              src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+              alt="Designer working"
+              class="rounded-lg shadow-xl"
+            />
+          </div>
+          <div class="md:w-1/2">
+            <h3 class="text-2xl font-serif font-semibold text-gray-800 mb-4">
+              Crafting Beautiful Spaces Since 2010
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Elegance Interiors is a premier interior design firm dedicated to
+              creating spaces that are both beautiful and functional. Our team
+              of experienced designers brings a unique blend of creativity and
+              technical expertise to every project.
+            </p>
+            <p class="text-gray-600 mb-8">
+              We believe that great design should reflect the personality and
+              lifestyle of our clients while maintaining timeless appeal. From
+              concept to completion, we pay attention to every detail to ensure
+              a seamless design experience.
+            </p>
+            <div class="grid grid-cols-2 gap-4 mb-8">
+              <div class="flex items-center">
+                <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                  <i class="fas fa-award text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">15+ Awards</h4>
+                  <p class="text-sm text-gray-600">Industry recognition</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                  <i class="fas fa-project-diagram text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">200+ Projects</h4>
+                  <p class="text-sm text-gray-600">Completed successfully</p>
+                </div>
+              </div>
+            </div>
+            <a
+              href="#contact"
+              class="inline-flex items-center text-primary font-medium hover:underline"
+            >
+              Learn more about us
+              <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Our Services</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">We offer comprehensive interior design services tailored to your unique needs and preferences.</p>
-                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
-                    <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-home text-primary text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-serif font-semibold mb-4">Residential Design</h3>
-                    <p class="text-gray-600 mb-4">Transform your home into a sanctuary that reflects your personal style and meets your functional needs.</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            Space planning
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            Furniture selection
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            Color consultation
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
-                    <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-building text-primary text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-serif font-semibold mb-4">Commercial Design</h3>
-                    <p class="text-gray-600 mb-4">Create inspiring work environments that enhance productivity and reflect your brand identity.</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            Office design
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            Retail spaces
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            Hospitality design
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
-                    <div class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-pencil-ruler text-primary text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-serif font-semibold mb-4">Custom Solutions</h3>
-                    <p class="text-gray-600 mb-4">Tailored design services for unique spaces and specific client requirements.</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            Custom furniture
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            Lighting design
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-accent mr-2"></i>
-                            Architectural details
-                        </li>
-                    </ul>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4"
+          >
+            Our Services
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            We offer comprehensive interior design services tailored to your
+            unique needs and preferences.
+          </p>
+          <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
         </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 border border-gray-100"
+          >
+            <div
+              class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-home text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-serif font-semibold mb-4">
+              Residential Design
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Transform your home into a sanctuary that reflects your personal
+              style and meets your functional needs.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check text-accent mr-2"></i>
+                Space planning
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-accent mr-2"></i>
+                Furniture selection
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-accent mr-2"></i>
+                Color consultation
+              </li>
+            </ul>
+          </div>
+          <div
+            class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 border border-gray-100"
+          >
+            <div
+              class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-building text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-serif font-semibold mb-4">
+              Commercial Design
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Create inspiring work environments that enhance productivity and
+              reflect your brand identity.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check text-accent mr-2"></i>
+                Office design
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-accent mr-2"></i>
+                Retail spaces
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-accent mr-2"></i>
+                Hospitality design
+              </li>
+            </ul>
+          </div>
+          <div
+            class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 border border-gray-100"
+          >
+            <div
+              class="bg-primary bg-opacity-10 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-pencil-ruler text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-serif font-semibold mb-4">
+              Custom Solutions
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Tailored design services for unique spaces and specific client
+              requirements.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check text-accent mr-2"></i>
+                Custom furniture
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-accent mr-2"></i>
+                Lighting design
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-accent mr-2"></i>
+                Architectural details
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Gallery Section -->
     <section id="gallery" class="py-20 bg-secondary">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Our Portfolio</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Explore our recent projects and see how we've transformed spaces with our design expertise.</p>
-                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white">
-                    <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Modern Living Room" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-serif text-xl font-semibold mb-2">Modern Living Room</h3>
-                        <p class="text-gray-600">Contemporary design with warm wood accents and minimalist furniture.</p>
-                    </div>
-                </div>
-                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white">
-                    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80" alt="Luxury Bedroom" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-serif text-xl font-semibold mb-2">Luxury Bedroom</h3>
-                        <p class="text-gray-600">Elegant bedroom design with custom headboard and premium textiles.</p>
-                    </div>
-                </div>
-                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white">
-                    <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Contemporary Kitchen" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-serif text-xl font-semibold mb-2">Contemporary Kitchen</h3>
-                        <p class="text-gray-600">Sleek kitchen design with quartz countertops and custom cabinetry.</p>
-                    </div>
-                </div>
-                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white">
-                    <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Home Office" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-serif text-xl font-semibold mb-2">Home Office</h3>
-                        <p class="text-gray-600">Productive workspace with ergonomic furniture and ample natural light.</p>
-                    </div>
-                </div>
-                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white">
-                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1736&q=80" alt="Spa Bathroom" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-serif text-xl font-semibold mb-2">Spa Bathroom</h3>
-                        <p class="text-gray-600">Luxurious bathroom with freestanding tub and natural stone finishes.</p>
-                    </div>
-                </div>
-                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white">
-                    <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Dining Area" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="font-serif text-xl font-semibold mb-2">Dining Area</h3>
-                        <p class="text-gray-600">Elegant dining space with custom lighting and designer chairs.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-12">
-                <a href="#contact" class="bg-primary text-white px-8 py-3 rounded-md hover:bg-opacity-90 transition duration-300 inline-block">Start Your Project</a>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4"
+          >
+            Our Portfolio
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Explore our recent projects and see how we've transformed spaces
+            with our design expertise.
+          </p>
+          <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
         </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="gallery-item rounded-lg overflow-hidden shadow-md bg-white"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+              alt="Modern Living Room"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="font-serif text-xl font-semibold mb-2">
+                Modern Living Room
+              </h3>
+              <p class="text-gray-600">
+                Contemporary design with warm wood accents and minimalist
+                furniture.
+              </p>
+            </div>
+          </div>
+          <div
+            class="gallery-item rounded-lg overflow-hidden shadow-md bg-white"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80"
+              alt="Luxury Bedroom"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="font-serif text-xl font-semibold mb-2">
+                Luxury Bedroom
+              </h3>
+              <p class="text-gray-600">
+                Elegant bedroom design with custom headboard and premium
+                textiles.
+              </p>
+            </div>
+          </div>
+          <div
+            class="gallery-item rounded-lg overflow-hidden shadow-md bg-white"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+              alt="Contemporary Kitchen"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="font-serif text-xl font-semibold mb-2">
+                Contemporary Kitchen
+              </h3>
+              <p class="text-gray-600">
+                Sleek kitchen design with quartz countertops and custom
+                cabinetry.
+              </p>
+            </div>
+          </div>
+          <div
+            class="gallery-item rounded-lg overflow-hidden shadow-md bg-white"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+              alt="Home Office"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="font-serif text-xl font-semibold mb-2">Home Office</h3>
+              <p class="text-gray-600">
+                Productive workspace with ergonomic furniture and ample natural
+                light.
+              </p>
+            </div>
+          </div>
+          <div
+            class="gallery-item rounded-lg overflow-hidden shadow-md bg-white"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1736&q=80"
+              alt="Spa Bathroom"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="font-serif text-xl font-semibold mb-2">
+                Spa Bathroom
+              </h3>
+              <p class="text-gray-600">
+                Luxurious bathroom with freestanding tub and natural stone
+                finishes.
+              </p>
+            </div>
+          </div>
+          <div
+            class="gallery-item rounded-lg overflow-hidden shadow-md bg-white"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+              alt="Dining Area"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="font-serif text-xl font-semibold mb-2">Dining Area</h3>
+              <p class="text-gray-600">
+                Elegant dining space with custom lighting and designer chairs.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <a
+            href="#contact"
+            class="bg-primary text-white px-8 py-3 rounded-md hover:bg-opacity-90 transition duration-300 inline-block"
+            >Start Your Project</a
+          >
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials Section -->
     <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Client Testimonials</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Hear what our clients say about working with us.</p>
-                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-secondary p-8 rounded-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="text-yellow-400 mr-2">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic mb-6">"Elegance Interiors transformed our outdated living room into a modern, functional space that we absolutely love. Their attention to detail and creative solutions exceeded our expectations."</p>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Sarah Johnson</h4>
-                            <p class="text-sm text-gray-600">Homeowner</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-secondary p-8 rounded-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="text-yellow-400 mr-2">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic mb-6">"Working with Elegance Interiors on our office redesign was a pleasure. They understood our brand identity and created a space that impresses both employees and clients alike."</p>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Michael Chen</h4>
-                            <p class="text-sm text-gray-600">CEO, TechStart Inc.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-secondary p-8 rounded-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="text-yellow-400 mr-2">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic mb-6">"The team at Elegance Interiors has an incredible eye for design. They took our vague ideas and turned them into a cohesive, beautiful home that perfectly suits our family's needs."</p>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emily Rodriguez" class="w-12 h-12 rounded-full mr-4">
-                        <div>
-                            <h4 class="font-semibold">Emily Rodriguez</h4>
-                            <p class="text-sm text-gray-600">Homeowner</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4"
+          >
+            Client Testimonials
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Hear what our clients say about working with us.
+          </p>
+          <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
         </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-secondary p-8 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 italic mb-6">
+              "Elegance Interiors transformed our outdated living room into a
+              modern, functional space that we absolutely love. Their attention
+              to detail and creative solutions exceeded our expectations."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/women/43.jpg"
+                alt="Sarah Johnson"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Sarah Johnson</h4>
+                <p class="text-sm text-gray-600">Homeowner</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-secondary p-8 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 italic mb-6">
+              "Working with Elegance Interiors on our office redesign was a
+              pleasure. They understood our brand identity and created a space
+              that impresses both employees and clients alike."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Michael Chen"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Michael Chen</h4>
+                <p class="text-sm text-gray-600">CEO, TechStart Inc.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-secondary p-8 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div class="text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 italic mb-6">
+              "The team at Elegance Interiors has an incredible eye for design.
+              They took our vague ideas and turned them into a cohesive,
+              beautiful home that perfectly suits our family's needs."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/women/65.jpg"
+                alt="Emily Rodriguez"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <h4 class="font-semibold">Emily Rodriguez</h4>
+                <p class="text-sm text-gray-600">Homeowner</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-primary text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Get In Touch</h2>
-                <p class="max-w-2xl mx-auto opacity-80">Ready to transform your space? Contact us for a consultation or to discuss your project.</p>
-                <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
-            </div>
-            <div class="flex flex-col md:flex-row gap-12">
-                <div class="md:w-1/2">
-                    <form class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium mb-1">Name</label>
-                                <input type="text" id="name" class="w-full px-4 py-3 rounded-md bg-primary border border-white border-opacity-30 focus:border-opacity-100 focus:outline-none placeholder-white placeholder-opacity-70">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium mb-1">Email</label>
-                                <input type="email" id="email" class="w-full px-4 py-3 rounded-md bg-primary border border-white border-opacity-30 focus:border-opacity-100 focus:outline-none placeholder-white placeholder-opacity-70">
-                            </div>
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-sm font-medium mb-1">Phone</label>
-                            <input type="tel" id="phone" class="w-full px-4 py-3 rounded-md bg-primary border border-white border-opacity-30 focus:border-opacity-100 focus:outline-none placeholder-white placeholder-opacity-70">
-                        </div>
-                        <div>
-                            <label for="service" class="block text-sm font-medium mb-1">Service Interested In</label>
-                            <select id="service" class="w-full px-4 py-3 rounded-md bg-primary border border-white border-opacity-30 focus:border-opacity-100 focus:outline-none placeholder-white placeholder-opacity-70">
-                                <option value="">Select a service</option>
-                                <option value="residential">Residential Design</option>
-                                <option value="commercial">Commercial Design</option>
-                                <option value="custom">Custom Solutions</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium mb-1">Message</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-md bg-primary border border-white border-opacity-30 focus:border-opacity-100 focus:outline-none placeholder-white placeholder-opacity-70"></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="w-full bg-white text-primary px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition duration-300">Send Message</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="md:w-1/2">
-                    <div class="bg-white bg-opacity-10 p-8 rounded-lg h-full">
-                        <h3 class="text-xl font-serif font-semibold mb-6">Contact Information</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4 flex-shrink-0">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium mb-1">Our Studio</h4>
-                                    <p class="text-sm opacity-80">123 Design Avenue, Creative District<br>New York, NY 10001</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4 flex-shrink-0">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium mb-1">Email Us</h4>
-                                    <p class="text-sm opacity-80">info@eleganceinteriors.com<br>support@eleganceinteriors.com</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4 flex-shrink-0">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-medium mb-1">Call Us</h4>
-                                    <p class="text-sm opacity-80">+1 (555) 123-4567<br>Mon-Fri, 9:00 AM - 6:00 PM</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-8">
-                            <h4 class="font-medium mb-4">Follow Us</h4>
-                            <div class="flex space-x-4">
-                                <a href="#" class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#" class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
-                                    <i class="fab fa-pinterest-p"></i>
-                                </a>
-                                <a href="#" class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300">
-                                    <i class="fab fa-houzz"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">
+            Get In Touch
+          </h2>
+          <p class="max-w-2xl mx-auto opacity-80">
+            Ready to transform your space? Contact us for a consultation or to
+            discuss your project.
+          </p>
+          <div class="w-20 h-1 bg-accent mx-auto mt-4"></div>
         </div>
+        <div class="flex flex-col md:flex-row gap-12">
+          <div class="md:w-1/2">
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="name" class="block text-sm font-medium mb-1"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-3 rounded-md bg-primary border border-white border-opacity-30 focus:border-opacity-100 focus:outline-none placeholder-white placeholder-opacity-70"
+                  />
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-medium mb-1"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full px-4 py-3 rounded-md bg-primary border border-white border-opacity-30 focus:border-opacity-100 focus:outline-none placeholder-white placeholder-opacity-70"
+                  />
+                </div>
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium mb-1"
+                  >Phone</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  class="w-full px-4 py-3 rounded-md bg-primary border border-white border-opacity-30 focus:border-opacity-100 focus:outline-none placeholder-white placeholder-opacity-70"
+                />
+              </div>
+              <div>
+                <label for="service" class="block text-sm font-medium mb-1"
+                  >Service Interested In</label
+                >
+                <select
+                  id="service"
+                  class="w-full px-4 py-3 rounded-md bg-primary border border-white border-opacity-30 focus:border-opacity-100 focus:outline-none placeholder-white placeholder-opacity-70"
+                >
+                  <option value="">Select a service</option>
+                  <option value="residential">Residential Design</option>
+                  <option value="commercial">Commercial Design</option>
+                  <option value="custom">Custom Solutions</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium mb-1"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="w-full px-4 py-3 rounded-md bg-primary border border-white border-opacity-30 focus:border-opacity-100 focus:outline-none placeholder-white placeholder-opacity-70"
+                ></textarea>
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  class="w-full bg-white text-primary px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition duration-300"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="md:w-1/2">
+            <div class="bg-white bg-opacity-10 p-8 rounded-lg h-full">
+              <h3 class="text-xl font-serif font-semibold mb-6">
+                Contact Information
+              </h3>
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div
+                    class="bg-white bg-opacity-20 p-3 rounded-full mr-4 flex-shrink-0"
+                  >
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium mb-1">Our Studio</h4>
+                    <p class="text-sm opacity-80">
+                      123 Design Avenue, Creative District<br />New York, NY
+                      10001
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="bg-white bg-opacity-20 p-3 rounded-full mr-4 flex-shrink-0"
+                  >
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium mb-1">Email Us</h4>
+                    <p class="text-sm opacity-80">
+                      info@eleganceinteriors.com<br />support@eleganceinteriors.com
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="bg-white bg-opacity-20 p-3 rounded-full mr-4 flex-shrink-0"
+                  >
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-medium mb-1">Call Us</h4>
+                    <p class="text-sm opacity-80">
+                      +1 (555) 123-4567<br />Mon-Fri, 9:00 AM - 6:00 PM
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-8">
+                <h4 class="font-medium mb-4">Follow Us</h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300"
+                  >
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300"
+                  >
+                    <i class="fab fa-pinterest-p"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="bg-white bg-opacity-20 w-10 h-10 rounded-full flex items-center justify-center hover:bg-opacity-30 transition duration-300"
+                  >
+                    <i class="fab fa-houzz"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-serif font-bold mb-4">Elegance Interiors</h3>
-                    <p class="text-gray-400 text-sm">Creating beautiful, functional spaces that inspire and delight.</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
-                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition duration-300">Gallery</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Residential Design</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Commercial Design</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Space Planning</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Custom Furniture</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Lighting Design</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Newsletter</h4>
-                    <p class="text-gray-400 text-sm mb-4">Subscribe to our newsletter for design tips and inspiration.</p>
-                    <form class="flex">
-                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-md text-gray-900 focus:outline-none">
-                        <button type="submit" class="bg-primary px-4 py-2 rounded-r-md hover:bg-opacity-90 transition duration-300">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">© 2025 Elegance Interiors. All rights reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Privacy Policy</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Terms of Service</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-sm">Sitemap</a>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-serif font-bold mb-4">
+              Elegance Interiors
+            </h3>
+            <p class="text-gray-400 text-sm">
+              Creating beautiful, functional spaces that inspire and delight.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#gallery"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Services</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Residential Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Commercial Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Space Planning</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Custom Furniture</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Lighting Design</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Newsletter</h4>
+            <p class="text-gray-400 text-sm mb-4">
+              Subscribe to our newsletter for design tips and inspiration.
+            </p>
+            <form class="flex">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="px-4 py-2 w-full rounded-l-md text-gray-900 focus:outline-none"
+              />
+              <button
+                type="submit"
+                class="bg-primary px-4 py-2 rounded-r-md hover:bg-opacity-90 transition duration-300"
+              >
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
         </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm">
+            © 2025 Elegance Interiors. All rights reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition duration-300 text-sm"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition duration-300 text-sm"
+              >Terms of Service</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition duration-300 text-sm"
+              >Sitemap</a
+            >
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+      // Mobile menu toggle
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu when clicking a link
+      const navLinks = document.querySelectorAll("#mobile-menu a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
         });
-        
-        // Close mobile menu when clicking a link
-        const navLinks = document.querySelectorAll('#mobile-menu a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+      });
+
+      // Smooth scrolling for all links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
             });
+          }
         });
-        
-        // Smooth scrolling for all links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+      });
     </script>
-</body>
+  </body>
 </html>
