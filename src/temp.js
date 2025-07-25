@@ -31,9 +31,6 @@ topParent.appendChild(dubCards[rndm2()]);
 topParent.appendChild(dubCards[rndm2() + 1]);
 topParent.appendChild(dubCards[rndm2() - 1]);
 var search = document.getElementById("search");
-search.addEventListener("focusout", () => {
-  modelContainer.style.display = "none";
-});
 
 const newDubCards = [];
 for (let i = 0; i < dubCards.length; i++) {
@@ -47,10 +44,13 @@ for (let index = 0; index < newDubCards.length; index++) {
   }
 }
 
-search.addEventListener("focus", () => {
-  modelContainer.style.display = "flex";
-
+search.addEventListener("click", () => {
   search.addEventListener("keyup", function () {
+    if (search.value.length > 0) {
+      modelContainer.style.display = "flex";
+    } else {
+      modelContainer.style.display = "none";
+    }
     var enterdValue = search.value.toUpperCase();
     for (count = 0; count < newDubCards.length; count++) {
       var productName = newDubCards[count].querySelector("h3").textContent;
