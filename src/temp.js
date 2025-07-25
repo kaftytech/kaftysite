@@ -73,7 +73,7 @@ search.addEventListener("focus", () => {
   });
 });
 window.addEventListener("load", () => {
-  document.getElementsByClassName("containerLoaders")[0].style.display = "none";
+  document.getElementsByClassName("topLoders")[0].style.display = "none";
   document.getElementsByClassName("templateContainer")[0].style.display =
     "block";
 });

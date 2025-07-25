@@ -15,7 +15,3 @@ for (let i = 0; i < navLinks.length; i++) {
     sideNav.style.display = "none";
   });
 }
-window.addEventListener("load", () => {
-  document.getElementsByClassName("containerLoaders")[0].style.display = "none";
-  document.getElementsByClassName("homeContainer")[0].style.display = "block";
-});

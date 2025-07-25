@@ -10,3 +10,7 @@ form.addEventListener("submit", (e) => {
     )
     .catch((error) => console.error("Error!", error.message));
 });
+window.addEventListener("load", () => {
+  document.getElementsByClassName("topLoders")[0].style.display = "none";
+  document.getElementsByClassName("homeContainer")[0].style.display = "block";
+});
